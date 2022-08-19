@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+
+<body>
+    <h1>Em que País Você vive?</h1>
+    Em que País você vive? <input type="text" name="naturalidade" id="naturalidade">
+    <input type="button" value="Verificar" onclick="clicar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function clicar() {
+            var pais = window.document.querySelector('input#naturalidade')
+            var pais = window.document.getElementById('naturalidade').value
+           //var res = window.document.querySelector('input#naturalidade')
+            res.innerHTML = `<p>Você vive em ${pais}</p>`
+
+            if (pais == 'Brasil') {
+                res.innerHTML += '<p>Você é <strong>Brasileiro</strong>!</p>'
+            } else {
+                res.innerHTML += '<p>Você é <strong>Estrangeiro.</strong></p>'
+            }
+
+        }
+    </script>
+</body>
+
+</html>
